@@ -9,7 +9,7 @@ def get_data(file):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    inpoute = get_data("in_day3.txt")
+    inpoute = get_data("input.txt")
     pattern_len = len(inpoute[0])-1
     # print(pattern_len)
     # Solution 1

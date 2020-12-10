@@ -16,7 +16,7 @@ def get_data(file):
     return string_p
 
 if __name__ == '__main__':
-    inpoute = get_data("in_day3.txt")
+    inpoute = get_data("input.txt")
     checked_houses = [(0, 0)]
     santa = (0, 0)
     robo_santa = (0,0)

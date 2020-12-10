@@ -49,7 +49,7 @@ def get_data(file):
     return string_p
 
 if __name__ == '__main__':
-    inpoute = get_data("in_day5.txt")
+    inpoute = get_data("input.txt")
     cpt = 0
     for s in inpoute:
         cpt += is_str_correct2(s)

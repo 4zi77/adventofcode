@@ -25,7 +25,7 @@ def get_data(file):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    inpoute = get_data("in_day1_1.txt")
+    inpoute = get_data("input.txt")
     print(get_product_triplet_sum_2020(inpoute))
 
 

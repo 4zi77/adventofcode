@@ -19,7 +19,7 @@ def get_data(file):
     return string_p
 
 if __name__ == '__main__':
-    input = get_data("in_day1.txt")
+    input = get_data("input.txt")
     print(enter_basement(input))
 
 

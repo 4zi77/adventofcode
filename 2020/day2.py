@@ -26,7 +26,7 @@ def get_data(file):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    inpoute = get_data("in_day2.txt")
+    inpoute = get_data("input.txt")
     cpt = 0
     for L in inpoute:
         cpt += check_password2(L)

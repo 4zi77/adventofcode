@@ -22,7 +22,7 @@ def get_data(file):
     return string_p
 
 if __name__ == '__main__':
-    inpoute = get_data("in_day6.txt")
+    inpoute = get_data("input.txt")
     grid = [[0 for i in range(1000)] for j in range(1000)]
     for l in inpoute:
         com, x0, y0, x1, y1 = get_instruction(l)

@@ -21,5 +21,5 @@ def get_data(file):
     return L
 
 if __name__ == '__main__':
-    input = get_data("in_day2.txt")
+    input = get_data("input.txt")
     print(ribbon_length(input))
