@@ -1,3 +1,6 @@
+import time
+
+start = time.time()
 lines = open("input.txt").readlines()
 seats = [list(line[:-1]) for line in lines]
 
@@ -56,3 +59,4 @@ if __name__ == '__main__':
         next_seats = update_seats(seats)
     # print_seats(next_seats)
     print(sum(seat == '#' for line in seats for seat in line))
+    print(time.time()-start)
