@@ -1,7 +1,8 @@
-import time
+# Dirty code alert
 
 def get_data():
-    return open("input.txt", "r").read().split('\n')
+    with open("input.txt", "r") as f:
+        return f.read().split('\n')
 
 if __name__ == '__main__':
 

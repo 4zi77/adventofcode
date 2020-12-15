@@ -4,9 +4,12 @@ def get_data1():
         buses = [int(bus) for bus in f.readline().split(',') if bus != 'x']
         return time_dep, buses
 
+
 def get_data2():
-    buses = (open("input.txt", "r").readlines()[1]).split(',')
-    return [(i, int(bus)) for i, bus in enumerate(buses) if bus != 'x']
+    with open("input.txt", "r") as f:
+        buses = (f.readlines()[1]).split(',')
+        return [(i, int(bus)) for i, bus in enumerate(buses) if bus != 'x']
+
 
 def solve_weird_prime_thing(buses):
     time_dep = 0
@@ -17,13 +20,14 @@ def solve_weird_prime_thing(buses):
         common_mult *= divisor
     return time_dep
 
+
 def early_bus_val(t, buses):
     mini_t, bus = sorted([bus - t % bus, bus] for bus in buses)[0]
     return mini_t * bus
 
+
 if __name__ == '__main__':
-    t, buses = get_data1()
-    print(early_bus_val(t, buses))
-    buses = get_data2()
-    print(buses)
-    print(solve_weird_prime_thing(buses))
+    times, bus_list = get_data1()
+    print(early_bus_val(times, bus_list))
+    bus_list = get_data2()
+    print(solve_weird_prime_thing(bus_list))

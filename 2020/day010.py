@@ -10,8 +10,8 @@ t = {2: 2,
 
 def get_data():
     with open("input.txt") as f:
-        L = sorted([int(x) for x in f])
-    return [0] + L + [max(L) + 3]
+        values = sorted([int(x) for x in f])
+        return [0] + values + [max(values) + 3]
 
 
 if __name__ == '__main__':

@@ -1,22 +1,22 @@
-def get_data():
-    L = open("input.txt", "r").read().split('\n\n')
-    return L
+def solve1():
+    count = 0
+    with open("input.txt", "r") as f:
+        for group in f.read().split('\n\n'):
+            lines = group.split('\n')
+            if len(lines) == 1:
+                count += len(lines[0])
+            else:
+                res = lines[0]
+                for person in lines:
+                    for answer in person:
+                        if answer not in res:
+                            res += answer
+                count += len(res)
+        return count
+
 
 if __name__ == '__main__':
-    # L = get_data()
-    # cpt = 0
-    # for l in L:
-    #     s = l.split('\n')
-    #     if len(s)==1:
-    #         cpt+=len(s[0])
-    #     else:
-    #         res = s[0]
-    #         for p in s:
-    #             for c in p:
-    #                 if c not in res:
-    #                     res+=c
-    #         cpt+=len(res)
-    # print(cpt)
+    print(solve1())
     cpt = 0
     with open('input.txt', 'r') as data:
         for group in data.read().split('\n\n'):
