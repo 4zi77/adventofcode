@@ -1,3 +1,6 @@
+import time
+import statistics as st
+
 test_dict = {
     "test_1" : [0,3,6],  # 436 175594
     "test_2" : [1,3,2],  # 1 2578
@@ -30,7 +33,14 @@ def predict_ith(L, it, it2):
     return last_val
 
 if __name__ == '__main__':
+    times = []
     for i in range(1, 8):
+        start = time.time()
         number_list = test_dict[f"test_{i}"]
         print(predict_ith(number_list, iteration, iteration2), '\n')
+        times.append(time.time()-start)
+    start = time.time()
     print(predict_ith(real, iteration, iteration2))
+    times.append(time.time() - start)
+    mini, maxi, avgt, stdt = min(times), max(times), st.mean(times), st.stdev(times)
+    print(f"Times day15 part 2 : Min = {mini:2f}s, Max = {maxi:2f}s, Avg = {avgt:2f}s, Std = {stdt:2f}s")
